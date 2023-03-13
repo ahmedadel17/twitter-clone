@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+
+import Sidebar from './components/sidebar';
 import './App.css';
 
+import Search from './components/Search';
+import Newmain from './components/Newmain';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // <div className="container lg:mx-auto md:mx-auto sm:mx-0 flex flex-row ">
+    //    
+    //   
+    //   
+
+
+    
+    // </div>
+    <div className=' dark:bg-gray-800 '>
+      <Sidebar/>
+     <div className='flex flex-row '>
+     <Newmain/>
+      <Search/> 
+
+     </div>
+
+
+   
+
     </div>
+   
   );
 }
 
