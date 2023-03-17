@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import { Flowbite } from 'flowbite-react';
+// import "flowbite";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

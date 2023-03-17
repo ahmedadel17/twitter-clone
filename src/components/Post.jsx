@@ -7,14 +7,16 @@ import {IoShareOutline}from "react-icons/io5"
 import {RiNumbersFill} from "react-icons/ri"
 function Post(props) {
   const [buttoncolor,setbuttoncolor]=useState("#3167df")
- 
+ const[count,setcount]=useState(20)
   const handleevent=()=>{
     if(buttoncolor==="#3167df"){
     setbuttoncolor("#e91e63")
+    setcount(count+1)
     
     }
     else{
       setbuttoncolor("#3167df")
+      setcount(count-1)
      
     }
   }
@@ -32,11 +34,11 @@ function Post(props) {
     <img src={props.img} alt="" className='w-full h-full lg:mx-36 md:mx-28 sm:mx-10 border rounded-lg'/>
     </div>
     <div className='text-gray-800 w-full  py-4 flex flex-row justify-evenly'>
-     <div className='flex flex-row justify-evenly'> <AiOutlineHeart color={buttoncolor} size={"2rem"} className="mx-2" onClick={handleevent}/> </div>
-      <FaRetweet color="#3167df" size={"2rem"}  className="mx-2" onClick={handleevent}/>
-      <FaRegComment color="#3167df" size={"2rem"} className="mx-2" onClick={handleevent}/>
-      <IoShareOutline color="#3167df" size={"2rem"} className="mx-2" onClick={handleevent}/>
-      <RiNumbersFill color="#3167df" size={"2rem"} className="ml-2" onClick={handleevent}/>
+     <div className='flex flex-row justify-evenly'> <AiOutlineHeart color={buttoncolor} size={"2rem"} className="mx-2" onClick={handleevent}/> <h1 className='text-lg dark:text-white'>{count}</h1> </div>
+      <FaRetweet color="#3167df" size={"2rem"}  className="mx-2" />
+      <FaRegComment color="#3167df" size={"2rem"} className="mx-2" />
+      <IoShareOutline color="#3167df" size={"2rem"} className="mx-2" />
+      <RiNumbersFill color="#3167df" size={"2rem"} className="ml-2" />
 
 
 
